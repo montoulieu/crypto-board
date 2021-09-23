@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import ChiaBalance from '../components/ChiaBalance'
 import CMCTrendingLosers from '../components/CMCTrendingLosers'
+import DashboardHeader from '../components/DashboardHeader'
 import EthereumBalance from '../components/EthereumBalance'
 
 export default function Home() {
@@ -10,16 +11,11 @@ export default function Home() {
         <title>Crypto Board</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className="container mx-auto py-5">
-        <div className="sm:w-3/4 md:w-2/3 mx-auto">
-          <h1 className="text-4xl font-bold mx-auto mb-5">Crypto Board</h1>
-          <hr className="dark:border-gray-800"></hr>
-        </div>
-      </header>
+      <DashboardHeader />
       <div className="container mx-auto">
         <div className="sm:w-3/4 md:w-2/3 grid sm:grid-cols-2 gap-5 mx-auto">
-          <ChiaBalance />
           <EthereumBalance />
+          <ChiaBalance />
         </div>
       </div>
       {/* <div>

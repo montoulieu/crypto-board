@@ -10,7 +10,7 @@ function LogoChia() {
       fill-rule="evenodd"
       clip-rule="evenodd"
       viewBox="0 0 784.37 1277.39"
-      className="h-5 inline fill-current mr-2 mb-1"
+      className="h-5 inline fill-current"
     >
       <g id="Layer_x0020_1">
         <metadata id="CorelCorpID_0Corel-Layer" />

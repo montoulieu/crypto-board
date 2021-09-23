@@ -7,7 +7,7 @@ function LogoChia() {
       x="0px"
       y="0px"
       viewBox="0 0 127.51 123.41"
-      className="h-6 inline mr-2 mb-1 fill-current"
+      className="h-6 fill-current"
     >
       <g id="Layer_1"></g>
       <g id="Layer_2">
