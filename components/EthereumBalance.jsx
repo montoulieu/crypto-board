@@ -23,7 +23,7 @@ function ChiaBalance() {
     : 0;
 
   return (
-    <div className="flex flex-col ethereum-balance relative border-2 rounded-lg text-left border-purple-300 shadow-lg overflow-hidden">
+    <div className="flex flex-col ethereum-balance relative border-2 rounded-lg text-left border-purple-500 shadow-lg overflow-hidden">
       <header className="flex text-purple-500 items-center pr-5">
         <div className="bg-purple-500 text-white flex items-center justify-center h-11 w-11 mr-5 py-3 rounded-br-xl">
           <LogoEthereum />

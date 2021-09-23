@@ -7,7 +7,7 @@ function PayoutProgressBar({ payoutLimit, unpaidAmount, color }) {
     <div className="mt-auto">
       <div className="relative ">
         <div
-          className={`overflow-hidden h-3 text-xs flex rounded-b-md ${
+          className={`overflow-hidden h-3 text-xs flex ${
             color == "green" ? "bg-green-200" : "bg-purple-200"
           } `}
         >

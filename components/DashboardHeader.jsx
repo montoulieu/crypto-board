@@ -31,23 +31,39 @@ function DashboardHeader() {
           </div>
         </div>
       </header>
-      {menuOpen && (
-        <div className="flex flex-col absolute bg-gray-800 w-full bottom-0 inset-x-0">
-          <div className="p-5">
-            <label className="flex flex-col">
+      <div
+        className={`flex flex-col absolute bg-gray-800 w-full sm:w-2/3 mx-auto h-5/6 z-20 inset-x-0 bottom-0 transition-all duration-500 rounded-t-xl ${
+          menuOpen ? "" : "opacity-0 h-0 overflow-hidden translate-y-full"
+        }`}
+      >
+        <header className="p-3 relative text-center">
+          Settings
+          <button
+            className="absolute right-3 text-blue-400"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            Done
+          </button>
+        </header>
+        <div className="p-5">
+          {/* <label className="flex flex-col">
               Chia Pool
               <select>
                 <option>Flexpool</option>
                 <option>Space Pool</option>
               </select>
-            </label>
-            <label className="flex flex-col">
+            </label> */}
+          <label className="flex flex-col">
+            <span className="text-gray-300 uppercase font-light text-sm ml-2 mb-2">
               Chia Address
-              <input type="text" />
-            </label>
-          </div>
+            </span>
+            <input
+              type="text"
+              className="bg-gray-600 rounded-md p-2 text-white"
+            />
+          </label>
         </div>
-      )}
+      </div>
     </>
   );
 }

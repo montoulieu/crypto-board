@@ -18,7 +18,7 @@ function ChiaBalance() {
     : 0;
 
   return (
-    <div className="flex flex-col chia-balance relative border-2 rounded-lg text-left dark:border-green-300 border-green-400 shadow-lg overflow-hidden">
+    <div className="flex flex-col chia-balance relative border-2 rounded-lg text-left border-green-500 shadow-lg overflow-hidden">
       <header className="flex text-green-500 items-center pr-5">
         <div className="bg-green-500 text-white flex items-center justify-center h-11 w-11 mr-5 py-3 rounded-br-xl">
           <LogoChia />
