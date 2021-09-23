@@ -34,7 +34,7 @@ function ChiaBalance() {
         <span className="text-lg font-mono text-green-400">
           <span className="font-bold">USD </span>
           <span className="dark:text-green-200">
-            ${data.result.balanceCountervalue.toFixed(2)}
+            ${data ? data.result.balanceCountervalue.toFixed(2) : 0.0}
           </span>
         </span>
       </div>
