@@ -14,8 +14,8 @@ function ChiaBalance() {
 
   return (
     <div className="flex flex-col ethereum-balance border-2 rounded-lg p-5 text-left border-purple-300 shadow-lg">
-      <header className="flex">
-        <h2 className="text-xl dark:text-purple-400 text-purple-500 font-extrabold mb-2">
+      <header className="flex text-purple-500">
+        <h2 className="text-xl dark:text-purple-400  font-extrabold mb-2">
           <LogoEthereum />
           <a
             href="https://ethermine.org/miners/40B7d669BF8a897443716A4e25ab2D0403736360/dashboard"

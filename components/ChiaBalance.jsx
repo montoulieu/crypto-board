@@ -14,8 +14,8 @@ function ChiaBalance() {
 
   return (
     <div className="flex flex-col chia-balance relative border-2 rounded-lg p-5 text-left dark:border-green-200 border-green-400 shadow-lg">
-      <header className="flex">
-        <h2 className="text-xl text-green-400 font-extrabold mb-2">
+      <header className="flex text-green-500">
+        <h2 className="text-xl dark:text-green-400 font-extrabold mb-2">
           <LogoChia />
           <a
             href="https://www.flexpool.io/miner/xch/xch1ntqna0fwgeke7g6kgz0xje33kmjj5m4hn70dujgmjlyp73cwrp7sfc5v00"

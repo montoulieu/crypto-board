@@ -2,7 +2,7 @@ import 'tailwindcss/tailwind.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="dark:bg-gray-900 dark:text-gray-200 transition-colors duration-100">
+    <div className="dark:bg-black dark:text-white transition-colors duration-100">
       <Component {...pageProps} />
     </div>
   )
