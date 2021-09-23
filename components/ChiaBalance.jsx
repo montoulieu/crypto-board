@@ -1,4 +1,6 @@
 import useSWR from "swr";
+import LogoChia from "./logos/LogoChia";
+import PayoutProgressBar from "./PayoutProgressBar";
 
 function ChiaBalance() {
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -10,9 +12,10 @@ function ChiaBalance() {
   );
 
   return (
-    <div className="chia-balance border rounded-lg p-5 text-left dark:border-green-200 border-green-400 shadow-lg">
+    <div className="flex flex-col chia-balance relative border-2 rounded-lg p-5 text-left dark:border-green-200 border-green-400 shadow-lg">
       <header className="flex">
         <h2 className="text-xl text-green-400 font-extrabold mb-2">
+          <LogoChia />
           <a
             href="https://www.flexpool.io/miner/xch/xch1ntqna0fwgeke7g6kgz0xje33kmjj5m4hn70dujgmjlyp73cwrp7sfc5v00"
             target="_blank"
@@ -24,7 +27,7 @@ function ChiaBalance() {
           ${data ? data.result.price : 0.0}
         </div>
       </header>
-      <div>
+      <div className="mb-2">
         <div className="text-lg font-mono text-green-400">
           <span className="font-bold">XCH </span>
           <span className="dark:text-green-200">
@@ -38,6 +41,13 @@ function ChiaBalance() {
           </span>
         </span>
       </div>
+      <PayoutProgressBar
+        payoutLimit={0.1}
+        unpaidAmount={
+          data ? (data.result.balance * 0.000000000001).toFixed(5) : 0
+        }
+        color={"green"}
+      />
     </div>
   );
 }
