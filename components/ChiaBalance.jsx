@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import LogoChia from "./logos/LogoChia";
+import NFTPlotProfit from "./NFTPlotProfit";
 import PayoutProgressBar from "./PayoutProgressBar";
 
 function ChiaBalance() {
@@ -24,9 +25,10 @@ function ChiaBalance() {
           </a>
         </h2>
         <div className="text-lg font-mono dark:text-green-200 ml-auto">
-          ${data ? data.result.price : 0.0}
+          ${data ? data.result.price.toFixed(2) : 0.0}
         </div>
       </header>
+
       <div className="mb-2">
         <div className="text-lg font-mono text-green-400">
           <span className="font-bold">XCH </span>
@@ -34,13 +36,15 @@ function ChiaBalance() {
             {data ? (data.result.balance * 0.000000000001).toFixed(5) : 0}
           </span>{" "}
         </div>
-        <span className="text-lg font-mono text-green-400">
+        <div className="text-lg font-mono text-green-400">
           <span className="font-bold">USD </span>
           <span className="dark:text-green-200">
             ${data ? data.result.balanceCountervalue.toFixed(2) : 0.0}
           </span>
-        </span>
+        </div>
+        {/* <NFTPlotProfit /> */}
       </div>
+
       <PayoutProgressBar
         payoutLimit={0.1}
         unpaidAmount={
