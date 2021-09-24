@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import IconUser from "./logos/IconUser";
+import FormInput from "./settings/FormInput";
+import useSettingsStore from "../hooks/useSettingsStore";
 
 function DashboardHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -31,6 +33,7 @@ function DashboardHeader() {
           </div>
         </div>
       </header>
+
       <div
         className={`flex flex-col absolute bg-gray-800 w-full sm:w-2/3 mx-auto h-5/6 z-20 inset-x-0 bottom-0 transition-all duration-500 rounded-t-xl ${
           menuOpen ? "" : "opacity-0 h-0 overflow-hidden translate-y-full"
@@ -45,6 +48,7 @@ function DashboardHeader() {
             Done
           </button>
         </header>
+
         <div className="p-5">
           {/* <label className="flex flex-col">
               Chia Pool
@@ -53,15 +57,20 @@ function DashboardHeader() {
                 <option>Space Pool</option>
               </select>
             </label> */}
-          <label className="flex flex-col">
-            <span className="text-gray-300 uppercase font-light text-sm ml-2 mb-2">
-              Chia Address
-            </span>
-            <input
-              type="text"
-              className="bg-gray-600 rounded-md p-2 text-white"
-            />
-          </label>
+          <FormInput
+            id="chia-address"
+            label="Chia Address"
+            value={useSettingsStore((state) => state.chiaWalletAddress)}
+            onChange={useSettingsStore((state) => state.setChiaWalletAddress)}
+          />
+          <FormInput
+            id="ethereum-address"
+            label="Ethereum Address"
+            value={useSettingsStore((state) => state.ethereumWalletAddress)}
+            onChange={useSettingsStore(
+              (state) => state.setEthereumWalletAddress
+            )}
+          />
         </div>
       </div>
     </>
