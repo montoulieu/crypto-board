@@ -39,10 +39,10 @@ function DashboardHeader() {
           menuOpen ? "" : "opacity-0 h-0 overflow-hidden translate-y-full"
         }`}
       >
-        <header className="p-3 relative text-center">
-          Settings
+        <header className="p-5 relative text-center">
+          <span className="text-lg">Settings</span>
           <button
-            className="absolute right-3 text-blue-400"
+            className="absolute right-5 text-blue-400 font-semibold"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             Done
@@ -60,12 +60,14 @@ function DashboardHeader() {
           <FormInput
             id="chia-address"
             label="Chia Address"
+            placeholder="xch1ntqna0fwgeke7g6kgz0xje33kmjj5m4hn70dujgmjlyp73cwrp7sfc5v00"
             value={useSettingsStore((state) => state.chiaWalletAddress)}
             onChange={useSettingsStore((state) => state.setChiaWalletAddress)}
           />
           <FormInput
             id="ethereum-address"
             label="Ethereum Address"
+            placeholder="40B7d669BF8a897443716A4e25ab2D0403736360"
             value={useSettingsStore((state) => state.ethereumWalletAddress)}
             onChange={useSettingsStore(
               (state) => state.setEthereumWalletAddress
